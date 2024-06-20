@@ -16,7 +16,6 @@ export class PizzaService {
   }
 
   async getById(id: Number) : Promise<Pizza | undefined> {
-    const data = await fetch(`${this.url}/${id}`);
-    return await data.json() ?? {};
+    return (await this.getAll()).find(pizza => pizza.id === id);
   }
 }

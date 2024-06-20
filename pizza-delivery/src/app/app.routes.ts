@@ -3,7 +3,7 @@ import { Routes } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { OrderComponent } from './order/order.component';
-import { PizzaItemComponent } from './pizza-item/pizza-item.component';
+import { PizzaDetailComponent } from './pizza-detail/pizza-detail.component';
 
 export const routes: Routes = [
     {
@@ -22,8 +22,8 @@ export const routes: Routes = [
         component: OrderComponent,
     },
     {
-        path: 'pizza/:id',
+        path: 'pizzas/:id',
         title: 'Pizza',
-        component: PizzaItemComponent,
+        component: PizzaDetailComponent,
     },
 ];
