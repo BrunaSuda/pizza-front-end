@@ -1,9 +1,20 @@
-form {
-    height: 100vh;
+.main {
+    height: 90vh;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: fit-content;
+}
+
+form > input {
+    display: block;
 }
 
 button {

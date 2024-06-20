@@ -1,32 +1,37 @@
-<form action method="post" class="align-middle" [formGroup]="loginForm" (ngSubmit)="onSubmit()">
-  <h1>Pizza Delivery</h1>
-  <section class="m-3">
-    <div class="mb-3">
-      <label for="login" class="form-label">Login: </label>
-      <input
-        formControlName="login"
-        class="form-control"
-        type="text"
-        name="login"
-        id="login"
-        placeholder="Insira seu e-mail ou CPF"
-        autocomplete="username"
-        required
-      />
-    </div>
-    <div class="mb-3">
-      <label for="senha" class="form-label">Senha: </label>
-      <input
-        formControlName="senha"
-        class="form-control"
-        type="password"
-        name="senha"
-        id="senha"
-        autocomplete="current-password"
-        required
-      />
-    </div>
-  </section>
-  <p><a href="" class="text-decoration-none">Esqueci a senha</a></p>
-  <button type="submit" class="btn btn-primary" [disabled]="!loginForm.valid">Enviar</button>
-</form>
+<div class="main">
+  <form action method="post" class="card p-4 text-center" [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+    <h1>Pizza Delivery</h1>
+    <section class="m-3">
+      <div class="mb-3">
+        <label for="login" class="form-label">Login: </label>
+        <input
+          formControlName="login"
+          class="form-control"
+          type="text"
+          name="login"
+          id="login"
+          placeholder="Insira seu e-mail ou CPF"
+          autocomplete="username"
+          required
+        />
+      </div>
+      <div class="mb-3">
+        <label for="senha" class="form-label">Senha: </label>
+        <input
+          formControlName="senha"
+          class="form-control mb-3"
+          type="password"
+          name="senha"
+          id="senha"
+          autocomplete="current-password"
+          required
+        />
+        <span id="passwordHelpInline" class="form-text">
+          Deve ter no mínimo 6 carateres.
+        </span>
+      </div>
+    </section>
+    <p><a href="" class="text-decoration-none">Esqueci a senha</a></p>
+    <button type="submit" class="btn btn-primary" [disabled]="!loginForm.valid">Enviar</button>
+  </form>
+</div>
