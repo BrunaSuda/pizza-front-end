@@ -1,0 +1,32 @@
+{
+    "pizzas": [
+        {
+            "id": 1,
+            "name": "Pizza Pepperoni",
+            "description": "Deliciosa pizza com cobertura crocante...",
+            "price": 32.90,
+            "photo": "http://localhost:5500/pizza-delivery/public/images/pizza-1.jpeg"
+        },
+        {
+            "id": 2,
+            "name": "Pizza Calabresa",
+            "description": "Deliciosa pizza com cobertura crocante...",
+            "price": 32.90,
+            "photo": "http://localhost:5500/pizza-delivery/public/images/pizza-2.jpg"
+        },
+        {
+            "id": 3,
+            "name": "Pizza Quatro Queijos",
+            "description": "Deliciosa pizza com cobertura crocante...",
+            "price": 35.90,
+            "photo": "http://localhost:5500/pizza-delivery/public/images/pizza-3.jpeg"
+        },
+        {
+            "id": 4,
+            "name": "Pizza Portuguesa",
+            "description": "Deliciosa pizza com cobertura crocante...",
+            "price": 30.90,
+            "photo": "http://localhost:5500/pizza-delivery/public/images/pizza-4.jpeg"
+        }
+    ]
+}

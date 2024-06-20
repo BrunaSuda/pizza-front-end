@@ -1,0 +1,43 @@
+<div class="row">
+  <div class="card col p-4 me-4">
+    <img
+      class="card-img-top object-fit-cover"
+      [src]="pizza?.photo"
+      alt="Photo of {{ pizza?.name }}"
+    />
+    <div class="card-body">
+      <h2>{{ pizza?.name }}</h2>
+      <p class="overflow-hidden">
+        {{ pizza?.description }}
+      </p>
+      <p>R$ {{ pizza?.price?.toFixed(2) }}</p>
+    </div>
+  </div>
+
+  <form class="card p-4 col-4" (ngSubmit)="onSubmit()">
+    <div class="mb-3">
+      <label for="quantidade" class="form-label">Quantidade</label>
+      <input type="number" class="form-control" [(ngModel)]="qtd" id="quantidade" name="quantidade" value="1" min="1" />
+    </div>
+    <div class="mb-3">
+      <label for="valorUnitario" class="form-label">Valor unitário</label>
+      <input type="number" class="form-control" [(ngModel)]="valorUnitario" id="valorUnitario" name="valorUnitario" [value]="pizza?.price?.toFixed(2)" disabled readonly/>
+    </div>
+    <div class="mb-3">
+      <label for="valorTotal" class="form-label">Valor total</label>
+      <input type="number" class="form-control" [(ngModel)]="valorTotal" id="valorTotal" name="valorTotal" [value]="(pizza?.price! * qtd).toFixed(2)" disabled readonly/>
+    </div>
+    <div class="mb-3">
+      <label for="meioPagamento" class="form-label"
+        >Meio de Pagamento:</label
+      >
+      <select class="form-select" [(ngModel)]="meioPagamento" id="meioPagamento" name="meioPagamento">
+        <option value="1" selected>Cartão de crédito</option>
+        <option value="2">Pix</option>
+        <option value="3">Dinheiro</option>
+      </select>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Enviar</button>
+  </form>
+</div>
