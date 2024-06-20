@@ -1,0 +1,12 @@
+<div class="card">
+  <img class="card-img-top object-fit-cover" [src]="pizza.photo" alt="Photo of {{ pizza.name }}" />
+  <div class="card-body">
+    <h2>{{ pizza.name }}</h2>
+    <p class="overflow-hidden">
+      {{ pizza.description }}
+    </p>
+    <p>R$ {{ pizza.price }}</p>
+    <a [routerLink]="['/pizza', pizza.id]" class="btn btn-primary">Solicitar agora</a>
+  </div>
+
+</div>
