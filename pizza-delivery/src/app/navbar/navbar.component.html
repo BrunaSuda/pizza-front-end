@@ -1,6 +1,22 @@
 <nav class="navbar navbar-expand-lg bg-body-tertiary mb-3">
   <div class="container-fluid">
-    <a class="navbar-brand" href="">Navbar</a>
+    <a class="navbar-brand" routerLink="">Pizza Delivery</a>
+    
+    <div class="collapse navbar-collapse ms-lg-5" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link" routerLink="" routerLinkActive="active">Cardápio</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/pedido" routerLinkActive="active">Meus pedidos</a>
+        </li>
+      </ul>
+      <button class="btn btn-outline-secondary mb-3 mb-lg-0" routerLink="/login">
+        <i class="bi bi-box-arrow-right"></i>
+      </button>
+    </div>
+    
+
     <button
       class="navbar-toggler"
       type="button"
@@ -12,15 +28,5 @@
     >
       <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-          <a class="nav-link" href="" routerLinkActive="active">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Link</a>
-        </li>
-      </ul>
-    </div>
   </div>
 </nav>
