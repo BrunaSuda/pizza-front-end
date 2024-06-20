@@ -15,7 +15,9 @@ export class PizzaService {
     return await data.json() ?? [];
   }
 
-  async getById(id: Number) : Promise<Pizza | undefined> {
-    return (await this.getAll()).find(pizza => pizza.id === id);
+  async getById(id: number) : Promise<Pizza | undefined> {
+    const pizzas = await this.getAll();
+    const pizza = pizzas.find(pizza => pizza.id == id);
+    return pizza;
   }
 }

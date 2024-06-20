@@ -20,7 +20,7 @@ export class PizzaDetailComponent {
   qtd: number = 1;
   valorUnitario: number;
   valorTotal: number;
-  meioPagamento: any;
+  meioPagamento: number = 1;
 
   constructor() {
     const id = Number(this.route.snapshot.params['id']);
